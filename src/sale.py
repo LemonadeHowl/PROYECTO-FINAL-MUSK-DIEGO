@@ -1,5 +1,5 @@
 class Sale:
-    def __init__(self, sale_id, client_id : int, product: str, category: str, amount: int, date: str):
+    def __init__(self, sale_id: str, client_id : int, product: str, category: str, amount: int, date: str):
         self.sale_id = str(sale_id)
         self.client_id = int(client_id)
         self.product = str(product)
