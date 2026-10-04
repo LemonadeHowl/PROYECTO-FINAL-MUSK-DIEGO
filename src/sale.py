@@ -4,7 +4,7 @@ class Sale:
         self.client_id = int(client_id)
         self.product = str(product)
         self.category = str(category)
-        self.amount = int(amount)
+        self.amount = float(amount)
         self.date = str(date)
 
     def to_dict(self):
