@@ -8,6 +8,14 @@ class SalesCollection:
             if sale.client_id == client_id:
                 total_sales.append(sale)
         return total_sales
+
+    def sales_by_category(self, category):
+        lista_category = []
+        for sale in self.sales:
+            if sale.category == category:
+                lista_category.append(sale)
+        return lista_category
+
                 
     def total_amount_by_client(self, client_id):
         client_sales = self.sales_by_client(client_id)
@@ -17,9 +25,9 @@ class SalesCollection:
         return sum(amounts)
 
     def total_amount_by_category(self, category):
-        client_country  = self.sales_by_client(category)
+        client_category  = self.sales_by_category(category)
         amounts = []
-        for sale in client_country:
+        for sale in client_category:
             amounts.append(sale.amount)
         return sum(amounts)
 
